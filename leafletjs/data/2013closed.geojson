@@ -1,0 +1,906 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.658068,41.764992 ]
+    },
+    "properties": {
+    "School Name":"Altgeld Elementary",
+    "Address":"1340 W. 71st St",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60636,
+    "Closed Into":"Wentworth",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.7590351,41.87358859999999 ]
+    },
+    "properties": {
+    "School Name":"Armstrong Elementary Math and Science",
+    "Address":"5345 W. Congress Pkwy",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60644,
+    "Closed Into":"Leland",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.625540,41.802240 ]
+    },
+    "properties": {
+    "School Name":"Attucks Elementary School",
+    "Address":"5055 S. State St.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60609,
+    "Closed Into":"Beethoven",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.63734929999998,41.77299799999999 ]
+    },
+    "properties": {
+    "School Name":"Banneker Elementary School",
+    "Address":"6656 S. Normal Blvd",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60621,
+    "Closed Into":"Mays",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.70224689999998,41.8703026 ]
+    },
+    "properties": {
+    "School Name":"Bethune Elementary School",
+    "Address":"3030 W. Arthington St",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60612,
+    "Closed Into":"Gregory",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.65648929999998,41.78848919999999 ]
+    },
+    "properties": {
+    "School Name":"Bontemps Elementary School",
+    "Address":"1241 W. 58th St.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60636,
+    "Closed Into":"Nicholson",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.56416209999998,41.72706219999999 ]
+    },
+    "properties": {
+    "School Name":"Buckingham Special Education Center",
+    "Address":"9207 S. Phillips Ave",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60617,
+    "Closed Into":"Montefiore",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.69753320000001,41.8781359 ]
+    },
+    "properties": {
+    "School Name":"Calhoun North Elementary School",
+    "Address":"2833 W. Adams St.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60612,
+    "Closed Into":"Cather",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.59001189999998,41.8045321 ]
+    },
+    "properties": {
+    "School Name":"Canter Middle School",
+    "Address":"4959 S. Blackstone Ave",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60615,
+    "Closed Into":"Hart",
+    "Closed Into2":"Ray",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.72398069999997,41.8784129 ]
+    },
+    "properties": {
+    "School Name":"Delano Elementary School",
+    "Address":"3937 W. Wilcox St",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60624,
+    "Closed Into":"Melody",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.60127299999999,41.774602 ]
+    },
+    "properties": {
+    "School Name":"Dumas Technology Academy Elementary School",
+    "Address":"6650 S. Ellis Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60637,
+    "Closed Into":"Wadsworth",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.69288410000001,41.9071048 ]
+    },
+    "properties": {
+    "School Name":"Roque De Duprey Elementary School",
+    "Address":"2620 W. Hirsch St.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60622,
+    "Closed Into":"DeDiego",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.76403779999998,41.8809312 ]
+    },
+    "properties": {
+    "School Name":"Emmet Elementary School",
+    "Address":"5500 W. Madison St.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60644,
+    "Closed Into":"Ellington",
+    "Closed Into2":"DePriest",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.71618280000001,41.8760781 ]
+    },
+    "properties": {
+    "School Name":"Ericson Elementary Scholastic Academy",
+    "Address":"3600 W. 5th Ave",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60624,
+    "Closed Into":"Sumner",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.59047570000001,41.7674131 ]
+    },
+    "properties": {
+    "School Name":"Fermi Elementary School",
+    "Address":"1415 E. 70th St.  ",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60637,
+    "Closed Into":"South Shore Fine Arts",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.7082623,41.8798883 ]
+    },
+    "properties": {
+    "School Name":"Garfield Park Prep Academy Elementary School",
+    "Address":"3250 W. Monroe St. ",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60624,
+    "Closed Into":"Faraday",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.64709119999998,41.7065448 ]
+    },
+    "properties": {
+    "School Name":"Garvey M Elementary School",
+    "Address":"10309 S. Morgan St. ",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60643,
+    "Closed Into":"Mount Vernon",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.73195980000003,41.8775566 ]
+    },
+    "properties": {
+    "School Name":"Goldblatt Elementary School",
+    "Address":"4257 W. Adams St. ",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60624,
+    "Closed Into":"Hefferan",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.67567050000002,41.78164539999999 ]
+    },
+    "properties": {
+    "School Name":"Goodlow Elementary Magnet School",
+    "Address":"2040 W. 62nd St.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60636,
+    "Closed Into":"Earle",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.72107499999998,41.863483 ]
+    },
+    "properties": {
+    "School Name":"Henson Elementary School",
+    "Address":"1329 S. Avers Ave. ",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60623,
+    "Closed Into":"C. Hughes",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.6804568,41.8797104 ]
+    },
+    "properties": {
+    "School Name":"Herbert Elementary School",
+    "Address":"2131 W. Monroe St.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60612,
+    "Closed Into":"Dett",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.766074,41.890019 ]
+    },
+    "properties": {
+    "School Name":"Key Elementary School",
+    "Address":"517 N. Parkside Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60644,
+    "Closed Into":"Ellington",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.6896165,41.8717512 ]
+    },
+    "properties": {
+    "School Name":"King Elementary School",
+    "Address":"740 S. Campbell Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60612,
+    "Closed Into":"Jensen",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.62404709999998,41.70480319999999 ]
+    },
+    "properties": {
+    "School Name":"Kohn Elementary School",
+    "Address":"10414 S. State St. ",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60628,
+    "Closed Into":"Cullen",
+    "Closed Into2":"Lavizzo",
+    "Closed Into3":"L.Hughes"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.69484130000001,41.8994704 ]
+    },
+    "properties": {
+    "School Name":"Lafayette Elementary School",
+    "Address":"2714 W. August Blvd.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60622,
+    "Closed Into":"Chopin",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.56653870000002,41.70928730000001 ]
+    },
+    "properties": {
+    "School Name":"Lawrence Elementary School",
+    "Address":"9928 S. Crandon Ave",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60617,
+    "Closed Into":"Burnham",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.64061549999997,41.9081325 ]
+    },
+    "properties": {
+    "School Name":"Manierre Elementary School",
+    "Address":"1420 N. Hudson Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60610,
+    "Closed Into":"Jenner",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.64662870000001,41.73390919999999 ]
+    },
+    "properties": {
+    "School Name":"Mahalia Jackson Elementary School",
+    "Address":"917 W. 88th St. ",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60620,
+    "Closed Into":"Fort Dearborn",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.73943839999998,41.8842896 ]
+    },
+    "properties": {
+    "School Name":"Marconi Elementary Community Academy",
+    "Address":"230 N. Kolmar Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60624,
+    "Closed Into":"Tilton",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.74958129999999,41.8736391 ]
+    },
+    "properties": {
+    "School Name":"May Elementary Community Academy",
+    "Address":"512 S. Lavergne Ave",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60644,
+    "Closed Into":"Leland",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.61979489999999,41.826885 ]
+    },
+    "properties": {
+    "School Name":"Mayo Elementary School",
+    "Address":"249 E. 37th Street",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60653,
+    "Closed Into":"Wells",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.6396904,41.74138600000001 ]
+    },
+    "properties": {
+    "School Name":"Morgan Elementary School",
+    "Address":"8407 S. Kerfoot Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60620,
+    "Closed Into":"Ryder",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.66111990000002,41.89539 ]
+    },
+    "properties": {
+    "School Name":"Near North Elementary School",
+    "Address":"739 N. Ada St. ",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60642,
+    "Closed Into":"Montefiore",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.62033859999997,41.80548570000001 ]
+    },
+    "properties": {
+    "School Name":"Overton Elementary School",
+    "Address":"221 E. 49th St",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60615,
+    "Closed Into":"Mollison",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.6228165,41.667382 ]
+    },
+    "properties": {
+    "School Name":"Owens Elementary Community Academy",
+    "Address":"12450 S. State St.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60628,
+    "Closed Into":"Gompers",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.71703439999999,41.8510448 ]
+    },
+    "properties": {
+    "School Name":"Paderewski Elementary Learning Academy",
+    "Address":"2221 S. Lawndale Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60623,
+    "Closed Into":"Cardenas ",
+    "Closed Into2":"Castellanos",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.6325903,41.80122530000001 ]
+    },
+    "properties": {
+    "School Name":"Parkman Elementary School",
+    "Address":"245 W. 51st St.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60609,
+    "Closed Into":"Sherwood",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.66431779999999,41.8999672 ]
+    },
+    "properties": {
+    "School Name":"Peabody Elementary School",
+    "Address":"1444 W. August Blvd.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60642,
+    "Closed Into":"Otis",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.61855789999998,41.8360169 ]
+    },
+    "properties": {
+    "School Name":"Pershing West Middle School",
+    "Address":"3200 S. Calumet Ave",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60616,
+    "Closed Into":"Pershing East",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.7032122,41.85596499999999 ]
+    },
+    "properties": {
+    "School Name":"Pope Elementary School",
+    "Address":"1852 S. Albany Ave",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60623,
+    "Closed Into":"Johnson",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.62369719999998,41.7844236 ]
+    },
+    "properties": {
+    "School Name":"Ross Elementary School",
+    "Address":"6059 S. Wabash Ave",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60637,
+    "Closed Into":"Dulles",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.71903179999998,41.89311809999999 ]
+    },
+    "properties": {
+    "School Name":"Ryerson Elementary School",
+    "Address":"646 N. Lawndale Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60624,
+    "Closed Into":"Ward",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.6089953,41.7852002 ]
+    },
+    "properties": {
+    "School Name":"Sexton Elementary School",
+    "Address":"6020 S. Langley Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60637,
+    "Closed Into":"Fisk",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.62488530000002,41.6805697 ]
+    },
+    "properties": {
+    "School Name":"Songhai Elementary Learning Institute",
+    "Address":"11725 S. Perry",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60628,
+    "Closed Into":"Curtis",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.65577580000001,41.9643528 ]
+    },
+    "properties": {
+    "School Name":"Stewart Elementary School",
+    "Address":"4525 N. Kenmore Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60640,
+    "Closed Into":"Brennemann",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.6646632,41.9620627 ]
+    },
+    "properties": {
+    "School Name":"Stockton Elementary School",
+    "Address":"4420 N. Beacon St.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60640,
+    "Closed Into":"Courtenay",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.66982780000001,41.9764074 ]
+    },
+    "properties": {
+    "School Name":"Trumbull Elementary School",
+    "Address":"5200 N. Ashland Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60640,
+    "Closed Into":"Chappell",
+    "Closed Into2":"McPherson",
+    "Closed Into3":"McCutcheon"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.69288410000001,41.9071048 ]
+    },
+    "properties": {
+    "School Name":"Von Humboldt Elementary School",
+    "Address":"2620 W. Hirsch St.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60622,
+    "Closed Into":"De Diego",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.6355269,41.6768972 ]
+    },
+    "properties": {
+    "School Name":"West Pullman Elementary School",
+    "Address":"11941 S. Parnell Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60628,
+    "Closed Into":"Haley",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.62869810000001,41.84340369999999 ]
+    },
+    "properties": {
+    "School Name":"Williams Middle Prep Academy",
+    "Address":"2710 S. Dearborn St",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60616,
+    "Closed Into":"Drake",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.62869810000001,41.84340369999999 ]
+    },
+    "properties": {
+    "School Name":"Williams Multiplex Elementary School",
+    "Address":"2710 S. Dearborn St",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60616,
+    "Closed Into":"Drake",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.65495320000002,41.7810178 ]
+    },
+    "properties": {
+    "School Name":"Woods Elementary Math & Science Academy",
+    "Address":"6206 S. Racine Ave.",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60636,
+    "Closed Into":"Bass",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.63198,41.7667193 ]
+    },
+    "properties": {
+    "School Name":"Yale Elementary School",
+    "Address":"7025 S. Princeton Ave",
+    "City":"Chicago",
+    "State":"Illinois",
+    "Zip":60621,
+    "Closed Into":"Harvard",
+    "Closed Into2":"",
+    "Closed Into3":""
+    }
+  }
+]
+}
