@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <title>Leaflet Tutorial Map</title>
+      <!-- External Stylesheets -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+</head>
+<body>
+  <!--Our web map and content will go here -->
+  <div id="map" style="width: 705px; height: 375px"></div>
+
+  <!-- Adds the Leaflet JavaScript library -->
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+  <!--Adds jQuery library-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script>
+    // Creates variable to hold map element, give initial settings to map to center Chicago
+    var map = L.map('map',{ center: [41.885286, -87.621515], zoom: 14});
+
+    // Creates a point feature for Altgeld Elementary
+    var myDataPoint = L.marker([41.764992, -87.658068]).addTo(map);
+
+    // Bind popup to Data Point object
+    myDataPoint.bindPopup("<h3>John P Altgeld Elementary School, West Englewood</h3><br><p> Closed Into: </p>Daniel S. Wentworth Elementary School, Englewood</p>");
+
+    // loads GeoJSON  from external file
+    $.getJSON("2013_school_closings.geojson",function(data){
+    // add GeoJSON layer to the map once the file is loaded
+    L.geoJson(data).addTo(map);
+    });
+
+    // Add OpenStreetMap tile layer to map element
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+
+</script>
+</body>
+</html>
