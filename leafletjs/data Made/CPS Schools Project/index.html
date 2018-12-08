@@ -26,9 +26,16 @@
     myDataPoint.bindPopup("<h3>John P Altgeld Elementary School, West Englewood</h3><br><p> Closed Into: </p>Daniel S. Wentworth Elementary School, Englewood</p>");
 
     // loads GeoJSON  from external file
-    $.getJSON("2013_school_closings.geojson",function(data){
+$.getJSON("2013closed.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
+    L.geoJson(data,{
+      style: function (feature) {
+   return {};
+   },
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup(feature.properties.School_Name);
+        }
+    }).addTo(map);
 });
 
     // Add OpenStreetMap tile layer to map element
