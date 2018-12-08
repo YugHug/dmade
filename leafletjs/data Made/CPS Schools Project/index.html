@@ -22,6 +22,14 @@
     // Creates a point feature for Altgeld Elementary
     var myDataPoint = L.marker([41.764992, -87.658068]).addTo(map);
 
+    //TESTING onEachFeature option to attach popup to features when they are clicked
+    function onEachFeature(feature, layer) {
+    // does this feature have a property named school_name?
+    if (feature.properties && feature.properties['School Name']) {
+        layer.bindPopup(feature.properties.school_name);
+    }
+}
+
     //TESTING to create a variable for feature, so that it can be called
     var geojsonFeature = {
     "type": "Feature",
@@ -37,11 +45,15 @@
 };
 
 //TESTING creates geojson layer and adds to map
+L.geoJSON(geojsonFeature, {
+onEachFeature: onEachFeature
+}).addTo(map);
+//removed add to map paste from here
     L.geoJSON(geojsonFeature).addTo(map);
 
     //TESTING pointToLayer to create Circle marker
     var geojsonMarkerOptions = {
-    radius: 8,
+    radius: 6,
     fillColor: "#ff7800",
     color: "#000",
     weight: 1,
@@ -49,7 +61,7 @@
     fillOpacity: 0.8
 };
 
-L.geoJSON(geojsonFeature, {
+    L.geoJSON(geojsonFeature, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     }
@@ -59,20 +71,19 @@ L.geoJSON(geojsonFeature, {
     myDataPoint.bindPopup("<h3>John P Altgeld Elementary School, West Englewood</h3><br><p> Closed Into: </p>Daniel S. Wentworth Elementary School, Englewood</p>");
 
     // loads GeoJSON  from external file
-$.getJSON("2013closed.geojson",function(data){
+    $.getJSON("2013closed.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
     L.geoJson(data,{
-      style: function (feature) {
+      style: function (feature, layer) {
    return {};
    },
         onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.School_Name);
+            layer.bindPopup(feature.properties['School Name']);
         }
     }).addTo(map);
 });
-
     // Add OpenStreetMap tile layer to map element
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
 
 </script>
 </body>
