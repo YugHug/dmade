@@ -40,7 +40,16 @@ function getColor(d) {
 
 function style(feature) {
   return {
+    /*
+    You had this before:
+
     fillColor: getColor(feature.properties.Black Population by census tract 2010_D001),
+
+    Since there are spaces in the name of the property, it can't be accessed by with the . option,
+    it needs to be accessed with brackets and quotes, like below.
+    */
+
+    fillColor: getColor(feature.properties['Black Population by census tract 2010_D001']),
     weight: 2,
     opacity: 1,
     color: 'white',
