@@ -28,13 +28,13 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
 L.geoJson(test).addTo(map);
 
 function getColor(d) {
-  return d > 2850 ? '#800026' :
-            d > 2450  ? '#BD0026' :
-            d > 2050  ? '#E31A1C' :
-            d > 1650  ? '#FC4E2A' :
-            d > 1250   ? '#FD8D3C' :
-            d > 850   ? '#FEB24C' :
-            d > 4050   ? '#FED976' :
+  return d > 9600 ? '#800026' :
+            d > 4800  ? '#BD0026' :
+            d > 2400  ? '#E31A1C' :
+            d > 1200  ? '#FC4E2A' :
+            d > 600   ? '#FD8D3C' :
+            d > 300   ? '#FEB24C' :
+            d > 150   ? '#FED976' :
                       '#FFEDA0';
 }
 
@@ -59,5 +59,46 @@ function style(feature) {
 }
 
 L.geoJson(test, {style: style}).addTo(map);
+
+var geojson = L.geoJson().addTo(map);
+geojson.addData(geojsonFeature);
+// ... our listeners
+
+function highlightFeature(e) {
+  var layer = e.target;
+
+  layer.setStyle({
+    weight: 5,
+    color: '#666',
+    dashArray: '',
+    fillOpacity: 0.7
+  });
+
+  if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+    layer.bringToFront();
+  }
+}
+
+function resetHighlight(e) {
+  geojson.resetStyle(e.target);
+}
+
+function zoomToFeature(e) {
+  map.fitBounds(e.target.getBounds());
+}
+
+function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        click: zoomToFeature
+    });
+}
+
+geojson = L.geoJson(test, {
+    style: style,
+    onEachFeature: onEachFeature
+}).addTo(map);
+
 </script>
 </html>
