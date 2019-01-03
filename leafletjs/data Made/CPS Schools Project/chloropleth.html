@@ -113,8 +113,8 @@ function resetHighlight(e) {
 }
 
 var geojson = L.geoJson().addTo(map);
-geojson.addData(geojsonFeature);
-// ... our listeners
+// geojson.addData(geojsonFeature);
+// // ... our listeners
 
 function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
@@ -142,7 +142,7 @@ L.control.scale({position: 'bottomleft'}).addTo(map)
 var legend = L.control({position: 'bottomright'});
 
 //Legend via Leaflet, place here
-end.onAdd = function (map) {
+legend.onAdd = function (map) {
   var div = L.DomUtil.create('div', 'info legend'),
     grades = [0, 300, 600, 900, 1200, 1600, 2000, 2400],
     labels = [];
