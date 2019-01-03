@@ -88,7 +88,7 @@ L.geoJson(test, {style: style}).addTo(map);
 //completes chloropleth variation
 
 //changes begin here
-// SHOULD highlight states on mouseover
+// SHOULD highlight population on mouseover
 function highlightFeature(e) {
     var layer = e.target;
 
@@ -104,9 +104,9 @@ function highlightFeature(e) {
     }
 }
 
-// Add Neighborhood Polygons, but AMEND to place it behind the choloropleth layer
-$.getJSON("neighborhoods.geojson", function(data){neighborhoodsLayer = L.geoJson(data, {style: style}).addTo(map)
-});
+// Add Neighborhood Polygons, but AMEND to place it behind the choloropleth layer; REMOVE unncessary
+//$.getJSON("neighborhoods.geojson", function(data){neighborhoodsLayer = L.geoJson(data, {style: style}).addTo(map)
+//});
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
