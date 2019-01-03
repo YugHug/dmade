@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
       <meta charset="utf-8">
       <title>2013 Closed CPS Schools</title>
       <!-- External Stylesheets -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+
+<style>
+.legend {
+	line-height: 18px;
+	color: #333333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	padding: 6px 8px;
+	background: white;
+	background: rgba(255,255,255,0.8);
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+
+.legend i {
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin-right: 8px;
+	opacity: 0.7;
+}
+
+.legend img {
+	width: 18px;
+	height: 18px;
+	float: left;
+}
+
+.legend p {
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0;
+}
+</style>
+
 </head>
 <body>
   <!--Our web map and content will go here -->
@@ -40,15 +74,6 @@ function getColor(d) {
 
 function style(feature) {
   return {
-    /*
-    You had this before:
-
-    fillColor: getColor(feature.properties.Black Population by census tract 2010_D001),
-
-    Since there are spaces in the name of the property, it can't be accessed by with the . option,
-    it needs to be accessed with brackets and quotes, like below.
-    */
-
     fillColor: getColor(feature.properties['Black Population by census tract 2010_D001']),
     weight: 2,
     opacity: 1,
@@ -60,31 +85,39 @@ function style(feature) {
 
 L.geoJson(test, {style: style}).addTo(map);
 
+//completes chloropleth variation
+
+//changes begin here
+// SHOULD highlight states on mouseover
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+    }
+}
+
+// Add Neighborhood Polygons, but AMEND to place it behind the choloropleth layer
+$.getJSON("neighborhoods.geojson", function(data){neighborhoodsLayer = L.geoJson(data, {style: style}).addTo(map)
+});
+
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+}
+
 var geojson = L.geoJson().addTo(map);
 geojson.addData(geojsonFeature);
 // ... our listeners
 
-function highlightFeature(e) {
-  var layer = e.target;
-
-  layer.setStyle({
-    weight: 5,
-    color: '#666',
-    dashArray: '',
-    fillOpacity: 0.7
-  });
-
-  if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-    layer.bringToFront();
-  }
-}
-
-function resetHighlight(e) {
-  geojson.resetStyle(e.target);
-}
-
 function zoomToFeature(e) {
-  map.fitBounds(e.target.getBounds());
+    map.fitBounds(e.target.getBounds());
 }
 
 function onEachFeature(feature, layer) {
@@ -99,6 +132,58 @@ geojson = L.geoJson(test, {
     style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
+
+//end section changes
+
+// Add Scale Bar to Map
+L.control.scale({position: 'bottomleft'}).addTo(map)
+
+// Create Leaflet Control Object for Legend
+var legend = L.control({position: 'bottomright'});
+
+//Legend via Leaflet, place here
+end.onAdd = function (map) {
+  var div = L.DomUtil.create('div', 'info legend'),
+    grades = [0, 300, 600, 900, 1200, 1600, 2000, 2400],
+    labels = [];
+
+// loop through our density intervals and generate a label with a colored square for each interval
+for (var i = 0; i < grades.length; i++) {
+        div.innerHTML +=
+            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+    }
+
+    return div;
+};
+
+legend.addTo(map);
+
+
+// Function that runs when legend is added to map
+//legend.onAdd = function (map) {
+
+	// Create Div Element and Populate it with HTML, commented out to try legend tutorial from leaflet site
+	//var div = L.DomUtil.create('div', 'legend');
+	//div.innerHTML += 'Population Density';
+	//div.innerHTML += 'by Census Tract';
+	//div.innerHTML += 'Black Population, 2010 ';
+  //div.innerHTML += '4800-9600+';
+  //div.innerHTML += '2400-4800';
+	//div.innerHTML += '1200-2400';
+	//div.innerHTML += '600-1200';
+	//div.innerHTML += '300-600';
+	//div.innerHTML += '150-300';
+	//div.innerHTML += '0-150';
+	//div.innerHTML += '2013 Closed Schools';
+	//div.innerHTML += 'Closed Neighborhood Schools';
+
+	// Return the Legend div containing the HTML content
+	//return div;
+//};
+
+// Add Legend to Map
+//legend.addTo(map);
 
 </script>
 </html>
