@@ -37,6 +37,33 @@
 	line-height: 18px;
 	margin: 0;
 }
+
+//CSS for the control below
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
 </style>
 
 </head>
@@ -135,8 +162,39 @@ geojson = L.geoJson(test, {
 
 //end section changes
 
+// Add custom control for population hover
+var info = L.control();
+
+info.onAdd = function (map) {
+  this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+  this.update();
+  return this._div;
+};
+
+//method that we use to update the control based on feature properties  TRYING TO FIGURE OUT WHAT TO SUBSTITUTE FOR MY VARIABLES
+info.update = function (props) {
+    this._div.innerHTML = '<h4>Black Population in Chicago, 2010</h4>' +  (props ? '<b>' + props['NAMELSAD']+ '</b><br />' + props['Black Population by census tract 2010_D001']+ ' people'
+        : 'Hover over a tract');
+};
+info.addTo(map);
+info.update = function (props) {
+    this._div.innerHTML = '<h4>Black Population in Chicago, 2010</h4>' +  (props ? '<b>' + props['NAMELSAD']+ '</b><br />' + props['Black Population by census tract 2010_D001']+ ' people'
+        : 'Hover over a tract');
+
+//Update the control when users hover over a tract..Modifies our listeners
+function highlightFeature(e) {
+  highlightLayer = e.target;
+  info.update(layer.feature.properties);
+}
+
+}
+function resetHighlight(e) {
+  resetHighlight =e.target;
+  info.update();
+}
+
 // Add Scale Bar to Map
-L.control.scale({position: 'bottomleft'}).addTo(map)
+L.control.scale({position: 'bottomleft'}).addTo(map);
 
 // Create Leaflet Control Object for Legend
 var legend = L.control({position: 'bottomright'});
