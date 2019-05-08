@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+      <title>2013 Closed CPS Schools</title>
+      <!-- External Stylesheets -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+
+<style>
+.legend {
+	line-height: 18px;
+	color: #333333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	padding: 6px 8px;
+	background: white;
+	background: rgba(255,255,255,0.8);
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+
+.legend i {
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin-right: 8px;
+	opacity: 0.7;
+}
+
+.legend img {
+	width: 18px;
+	height: 18px;
+	float: left;
+}
+
+.legend p {
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0;
+}
+
+//CSS for the control below
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+</style>
+
+</head>
+<body>
+  <!--Our web map and content will go here -->
+  <div id="map" style="width: 705px; height: 375px"></div>
+
+  <!-- Adds the Leaflet JavaScript library -->
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+  <!--Adds jQuery library-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="test.js"></script>
+
+<script>
+var mapboxAccessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+var map = L.map('map').setView([41.851026, -87.62791], 10);
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + mapboxAccessToken, {
+    id: 'mapbox.light'
+}).addTo(map);
+
+L.geoJson(test).addTo(map);
+
+function getColor(d) {
+  return d > 9600 ? '#800026' :
+            d > 4800  ? '#BD0026' :
+            d > 2400  ? '#E31A1C' :
+            d > 1200  ? '#FC4E2A' :
+            d > 600   ? '#FD8D3C' :
+            d > 300   ? '#FEB24C' :
+            d > 150   ? '#FED976' :
+                      '#FFEDA0';
+}
+
+function style(feature) {
+  return {
+    fillColor: getColor(feature.properties['Black Population by census tract 2010_D001']),
+    weight: 2,
+    opacity: 1,
+    color: 'white',
+    dashArray: '3',
+    fillOpacity: 0.7
+  };
+}
+
+L.geoJson(test, {style: style}).addTo(map);
+
+//completes chloropleth variation
+
+//changes begin here
+// SHOULD highlight population on mouseover
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+    }
+}
+
+// Add Neighborhood Polygons, but AMEND to place it behind the choloropleth layer; REMOVE unncessary
+//$.getJSON("neighborhoods.geojson", function(data){neighborhoodsLayer = L.geoJson(data, {style: style}).addTo(map)
+//});
+
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+}
+
+var geojson = L.geoJson().addTo(map);
+// geojson.addData(geojsonFeature);
+// // ... our listeners
+
+function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+}
+
+function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        click: zoomToFeature
+    });
+}
+
+geojson = L.geoJson(test, {
+    style: style,
+    onEachFeature: onEachFeature
+}).addTo(map);
+
+//end section changes
+
+// Add custom control for population hover
+var info = L.control();
+
+info.onAdd = function (map) {
+  this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+  this.update();
+  return this._div;
+};
+
+//method that we use to update the control based on feature properties  TRYING TO FIGURE OUT WHAT TO SUBSTITUTE FOR MY VARIABLES
+info.update = function (props) {
+    this._div.innerHTML = '<h4>Black Population in Chicago, 2010</h4>' +  (props ? '<b>' + props['NAMELSAD']+ '</b><br />' + props['Black Population by census tract 2010_D001']+ ' people'
+        : 'Hover over a tract');
+};
+info.addTo(map);
+info.update = function (props) {
+    this._div.innerHTML = '<h4>Black Population in Chicago, 2010</h4>' +  (props ? '<b>' + props['NAMELSAD']+ '</b><br />' + props['Black Population by census tract 2010_D001']+ ' people'
+        : 'Hover over a tract');
+
+//Update the control when users hover over a tract..Modifies our listeners
+function highlightFeature(e) {
+  highlightLayer = e.target;
+  info.update(layer.feature.properties);
+}
+
+}
+function resetHighlight(e) {
+  resetHighlight =e.target;
+  info.update();
+}
+
+// Add Scale Bar to Map
+L.control.scale({position: 'bottomleft'}).addTo(map);
+
+// Create Leaflet Control Object for Legend
+var legend = L.control({position: 'bottomright'});
+
+//Legend via Leaflet, place here
+legend.onAdd = function (map) {
+  var div = L.DomUtil.create('div', 'info legend'),
+    grades = [0, 300, 600, 900, 1200, 1600, 2000, 2400],
+    labels = [];
+
+// loop through our density intervals and generate a label with a colored square for each interval
+for (var i = 0; i < grades.length; i++) {
+        div.innerHTML +=
+            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+    }
+
+    return div;
+};
+
+legend.addTo(map);
+
+
+// Function that runs when legend is added to map
+//legend.onAdd = function (map) {
+
+	// Create Div Element and Populate it with HTML, commented out to try legend tutorial from leaflet site
+	//var div = L.DomUtil.create('div', 'legend');
+	//div.innerHTML += 'Population Density';
+	//div.innerHTML += 'by Census Tract';
+	//div.innerHTML += 'Black Population, 2010 ';
+  //div.innerHTML += '4800-9600+';
+  //div.innerHTML += '2400-4800';
+	//div.innerHTML += '1200-2400';
+	//div.innerHTML += '600-1200';
+	//div.innerHTML += '300-600';
+	//div.innerHTML += '150-300';
+	//div.innerHTML += '0-150';
+	//div.innerHTML += '2013 Closed Schools';
+	//div.innerHTML += 'Closed Neighborhood Schools';
+
+	// Return the Legend div containing the HTML content
+	//return div;
+//};
+
+// Add Legend to Map
+//legend.addTo(map);
+
+</script>
+</html>

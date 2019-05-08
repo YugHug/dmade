@@ -17,7 +17,7 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
     // Creates variable to hold map element, give initial settings to map to center Chicago
-    var map = L.map('map',{ center: [41.885286, -87.621515], zoom: 14});
+    var map = L.map('map',{ center: [41.851026, -87.62791], zoom: 10});
 
     // Creates a point feature for Altgeld Elementary
     var myDataPoint = L.marker([41.764992, -87.658068]).addTo(map);
@@ -67,8 +67,8 @@ onEachFeature: onEachFeature
     }
 }).addTo(map);
 
-    // Bind popup to Data Point object
-    myDataPoint.bindPopup("<h3>John P Altgeld Elementary School, West Englewood</h3><br><p> Closed Into: </p>Daniel S. Wentworth Elementary School, Englewood</p>");
+    // Bind popup to Data Point object; creates double
+   //myDataPoint.bindPopup("<h3>John P Altgeld Elementary School, West Englewood</h3><br><p> Closed Into: </p>Daniel S. Wentworth Elementary School, Englewood</p>");
 
     // loads GeoJSON  from external file
     $.getJSON("2013closed.geojson",function(data){
@@ -81,9 +81,18 @@ onEachFeature: onEachFeature
        return L.circleMarker(latlng, geojsonMarkerOptions);
    },
         onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties['School Name']);
+            layer.bindPopup(feature.properties['School Name'], ['Address']);
         }
     }).addTo(map);
+});
+
+//ADDED CHLOROPLETH MAP ATTEMPTS HERE
+// null variable that will hold census 2010 layer
+var neighborhoodsLayer = null;
+
+// Add Census Tracts
+$.getJSON("blktract2010.geojson",function(data){
+  neighborhoodsLayer = L.geoJSON(data).addTo(map);
 });
     // Add OpenStreetMap tile layer to map element
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
